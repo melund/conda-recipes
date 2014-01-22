@@ -1,0 +1,6 @@
+To build with mingw on win64 some numpy files need to be modified
+
+change site-packages/numpy/distutils/fcompiler/gnu.py 
+    comment out exception on line 331
+    change line 346 to 
+    return GnuFCompiler.get_flags_opt(self)
