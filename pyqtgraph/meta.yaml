@@ -1,0 +1,20 @@
+package:
+  name: pyqtgraph
+  version: !!str 0.9.8
+
+source:
+  fn: pyqtgraph-0.9.8.tar.gz
+  url: http://www.pyqtgraph.org/downloads/pyqtgraph-0.9.8.tar.gz
+
+requirements:
+    build:
+        - python
+        - numpy
+        - scipy
+    run:
+        - python
+        - numpy
+        - scipy
+
+about:            # (optional)
+  home: http://www.pyqtgraph.org
