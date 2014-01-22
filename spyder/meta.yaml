@@ -6,7 +6,12 @@ source:
   fn: spyder-2.3.0beta3.zip
   url: https://bitbucket.org/spyder-ide/spyderlib/downloads/spyder-2.3.0beta3.zip
   sha1: 5694c2759ae175b4fd65f9713ac1a5dff21f1fa2
-
+  
+  patches:
+   # List any patch files here
+    - fix_post_install_script.patch [win]
+  
+  
 build:
   osx_is_app: True
 
