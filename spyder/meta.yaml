@@ -1,19 +1,21 @@
 package:
   name: spyder
-  version: 2.3.0beta3
+  version: 2.3.0beta4
 
 source:
-  fn: spyder-2.3.0beta3.zip
-  url: https://bitbucket.org/spyder-ide/spyderlib/downloads/spyder-2.3.0beta3.zip
-  sha1: 5694c2759ae175b4fd65f9713ac1a5dff21f1fa2
+  #hg_url: https://bitbucket.org/spyder-ide/spyderlib
+  fn: spyder-2.3.0beta4.zip
+  url: https://bitbucket.org/spyder-ide/spyderlib/downloads/spyder-2.3.0beta4.zip
+  #sha1: 5694c2759ae175b4fd65f9713ac1a5dff21f1fa2
   
-  patches:
+#  patches:
    # List any patch files here
-    - fix_post_install_script.patch [win]
+#    - fix_post_install_script.patch [win]
   
   
 build:
   osx_is_app: True
+  number: 0                     # (optional, defaults to 0)
 
 requirements:
   build:
@@ -23,18 +25,26 @@ requirements:
     - pyflakes
   run:
     - python
+    - rope
+    - sphinx
+    - pep8
+    - sympy
     - ipython
+    - pylint
+    - pylint
     - pygments
     - pyzmq
     - pyside-pyzo          [not linux]
     - pyqt            [linux]
     - python.app      [osx]
-
-test:
-  commands:
-    - spyder -h
-  imports:
-    - spyderlib
+    
+    
+    
+#test:
+#  commands:
+#    - spyder -h
+#  imports:
+#    - spyderlib
 
 about:
   home: http://code.google.com/p/spyderlib/
