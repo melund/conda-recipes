@@ -1,0 +1,63 @@
+package:
+  name: pydoe
+  version: !!str 0.3.5
+
+source:
+  fn: pyDOE-0.3.5.tar.gz
+  url: https://pypi.python.org/packages/source/p/pyDOE/pyDOE-0.3.5.tar.gz
+  md5: 1b9f2aa5ea6fc1f724c8f6558d09d49b
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  #preserve_egg_dir: True
+  #entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - pydoe = pydoe:main
+    #
+    # Would create an entry point called pydoe that calls pydoe.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 2
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - numpy
+    - scipy
+
+  run:
+    - python
+    - numpy
+    - scipy
+
+test:
+  # Python imports
+  imports:
+    - pyDOE
+
+  #commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/tisimst/pyDOE
+  license: BSD License
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
