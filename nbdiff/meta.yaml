@@ -1,11 +1,11 @@
 package:
   name: nbdiff
-  version: !!str 1.0.2
+  version: !!str 1.0.3
 
 source:
-  fn: nbdiff-1.0.2.tar.gz
-  url: https://pypi.python.org/packages/source/n/nbdiff/nbdiff-1.0.2.tar.gz
-  md5: 5980dca70ca87c42eba666a2554a1192
+  fn: nbdiff-1.0.3.tar.gz
+  url: https://pypi.python.org/packages/source/n/nbdiff/nbdiff-1.0.3.tar.gz
+  md5: f5b0a14b7e0156efccedc4132ed334e6
 #  patches:
    # List any patch files here
    # - fix.patch
