@@ -1,5 +1,5 @@
 package:
-  name: pyopt-snopt     # lower case name of package, may contain '-' but no spaces
+  name: pyopt       # lower case name of package, may contain '-' but no spaces
   version: 1.1.0    # version of package. Should use the PEP-386 verlib conventions.
 
 source:
@@ -13,7 +13,16 @@ source:
   
 # The build number should be incremented for new builds of the same version
 build:            # (optional)
-  number: 1                        # (optional, defaults to 0)
+  number: 0                        # (optional, defaults to 0)
+
+# Defines what features a package has
+  features:
+    - SNOPT
+
+  # Indicates that installing this package should enable (track) the given
+  # features. A package does not need to have a feature to track it.
+  track_features:
+    - SNOPT
 
   
 # the build and runtime requirements:
