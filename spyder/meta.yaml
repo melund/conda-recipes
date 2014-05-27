@@ -1,21 +1,20 @@
 package:
   name: spyder
-  version: 2.3.0beta4
+  version: 2.3.0rc
 
 source:
   #hg_url: https://bitbucket.org/spyder-ide/spyderlib
-  fn: spyder-2.3.0beta4.zip
-  url: https://bitbucket.org/spyder-ide/spyderlib/downloads/spyder-2.3.0beta4.zip
+  fn: spyder-2.3.0rc.zip
+  url: https://bitbucket.org/spyder-ide/spyderlib/downloads/spyder-2.3.0rc.zip
   #sha1: 5694c2759ae175b4fd65f9713ac1a5dff21f1fa2
   
-#  patches:
-   # List any patch files here
-#    - fix_post_install_script.patch [win]
+  patches:
+    #List any patch files here
+    - fix_post_install_script.patch [win]
   
   
 build:
-  osx_is_app: True
-  number: 0                     # (optional, defaults to 0)
+  number: 0                   # (optional, defaults to 0)
 
 requirements:
   build:
@@ -34,9 +33,7 @@ requirements:
     - pylint
     - pygments
     - pyzmq
-    - pyside-pyzo          [not linux]
-    - pyqt            [linux]
-    - python.app      [osx]
+    - pyqt            
     
     
     
