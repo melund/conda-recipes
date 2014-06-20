@@ -7,7 +7,7 @@ source:
   #git_tag: 1.1.4
 
 build:            # (optional)
-  number: 0                       # (optional, defaults to 0)
+  number: 1                      # (optional, defaults to 0)
 
 # the build and runtime requirements:
 requirements:     # (optional)
