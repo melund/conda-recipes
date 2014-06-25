@@ -1,0 +1,29 @@
+package:
+  name: pydy     # lower case name of package, may contain '-' but no spaces
+  version: 0.0.0     # version of package. Should use the PEP-386 verlib conventions.
+
+source:
+  git_url: https://github.com/pydy/pydy.git
+  git_tag: v0.2.1
+
+build:            # (optional)
+  number: 1                      # (optional, defaults to 0)
+
+# the build and runtime requirements:
+requirements:     # (optional)
+  build:
+    - python
+    - setuptools
+    
+    
+  run:
+    - python
+    - sympy
+    - numpy
+    - ipython
+    
+
+
+about:            # (optional)
+  home: https://github.com/pydy/pydy
+  license: MIT
