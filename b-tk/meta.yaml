@@ -10,16 +10,11 @@ source:
   url: https://b-tk.googlecode.com/files/python-btk-0.3.0_win32.exe # [win32 and py27]
   sha1: 76ef382d508072a6daeff29b811e16f895411c66 # [win64 and py27]
   
-  fn btk-0.3.0.tar.gz [linux]
-  url: https://b-tk.googlecode.com/files/python-btk_0.3.0-1_amd64.deb # [linux64 and py27]
-  sha1: 0d72279c6ab0a34545d5efd194e9d15077f8f8dd # [linux64 and py27]  
   
 # The build number should be incremented for new builds of the same version
 build:            # (optional)
-  number: 0                        # (optional, defaults to 0)
+  number: 1                       # (optional, defaults to 0)
 
-  script: xcopy "%SRC_DIR%"\btk\* "%SP_DIR%"\btk\* /S/Y/I/Q # [win and py27]
-  script: cp $SRC_DIR/usr/local/lib/python2.7/dist-packages/btk/* $SP_DIR/btk/* # [linux and py27]
 
   
 # the build and runtime requirements:
