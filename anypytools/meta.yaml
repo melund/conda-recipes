@@ -4,7 +4,7 @@ package:
 
 source:
   git_url: https://github.com/AnyBody-Research-Group/AnyPyTools.git
-  #git_tag: 1.1.4
+  git_tag: v0.5.4
 
 build:            # (optional)
   number: 1                      # (optional, defaults to 0)
@@ -14,6 +14,7 @@ requirements:     # (optional)
   build:
     - python
     - setuptools
+    - scipy
     
   run:
     - python

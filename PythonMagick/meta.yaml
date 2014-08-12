@@ -1,0 +1,18 @@
+package:
+  name: pythonmagick       # lower case name of package, may contain '-' but no spaces
+  version: 0.9.10  # version of package. Should use the PEP-386 verlib conventions.
+  
+# The build number should be incremented for new builds of the same version
+build:            # (optional)
+  number: 0                        # (optional, defaults to 0)
+
+# the build and runtime requirements:
+requirements:     # (optional)
+  build:
+    - python
+  run:
+    - python
+
+  
+about:            # (optional)
+  home: http://www.imagemagick.org/
