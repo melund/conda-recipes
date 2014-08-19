@@ -8,7 +8,7 @@ REM IF EXIST %SNOPT_DIR% ( xcopy %SNOPT_DIR%\src\* "%SRC_DIR%"\pyOpt\pySNOPT\sou
 %SYS_PYTHON% setup.py install --compiler=mingw32 --prefix=%PREFIX%
 
 for %%x in (libgfortran-3.dll libquadmath-0.dll) do (
-   copy %SYS_PREFIX%\Scripts\%%x %SP_DIR%\pyopt\
+   copy %PREFIX%\Scripts\%%x %SP_DIR%\pyopt\
    if errorlevel 1 exit 1
 )
 

@@ -1,17 +1,14 @@
 package:
   name: pyopt     # lower case name of package, may contain '-' but no spaces
-  version: 1.1.0    # version of package. Should use the PEP-386 verlib conventions.
+  version: 1.2.0    # version of package. Should use the PEP-386 verlib conventions.
 
 source:
 # The source section specifies where the source code of the package is coming
 # from, it may be coming from a source tarball like:
-  #fn: pyOpt-1.1.0.tar.gz
-  #url: http://www.pyopt.org/_downloads/pyOpt-1.1.0.tar.gz
-  #fn: pyopt_svn.tar
-  svn_url: http://svn.pyopt.org/trunk
-  patches:
+  git_url: file://C:/Users/Morten/Documents/GitHub/pyopt
+  #patches:
    # List any patch files here
-    - add_pyOpt_to_path_while_importing.patch
+   # - add_pyOpt_to_path_while_importing.patch
 
    
 # The build number should be incremented for new builds of the same version
@@ -22,7 +19,8 @@ build:            # (optional)
 # the build and runtime requirements:
 requirements:     # (optional)
   build:
-    - python 
+    - python
+    - mingw
   run:
     - python
     - numpy
