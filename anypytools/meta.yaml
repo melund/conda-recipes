@@ -1,14 +1,18 @@
 package:
   name: anypytools     # lower case name of package, may contain '-' but no spaces
-  version: 0.0.0     # version of package. Should use the PEP-386 verlib conventions.
-
+  version: {{ environ['GIT_DESCRIBE_TAG'] }}
+  #version: 0.5.5.dev
 source:
   git_url: https://github.com/AnyBody-Research-Group/AnyPyTools.git
-  git_tag: v0.5.4
+#   git_url: file://C:/Users/Morten/Dropbox/Software projects/Python/AnyPyTools
 
 build:            # (optional)
-  number: 1                      # (optional, defaults to 0)
-
+  number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+  # Added to allow the pytest entry points in setup.py to work
+  # This is also the reason for setuptools beeing a runtime dependency. 
+  preserve_egg_dir: True
+  
+  
 # the build and runtime requirements:
 requirements:     # (optional)
   build:
@@ -17,6 +21,7 @@ requirements:     # (optional)
     - scipy
     
   run:
+    - setuptools
     - python
     - h5py
     - scipy
@@ -24,6 +29,9 @@ requirements:     # (optional)
     - matplotlib
     
 
+    
+    
+    
 #test:
 #  # Python imports
 #  imports:
