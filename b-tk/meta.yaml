@@ -4,11 +4,11 @@ package:
 
 source:
   fn: btk-0.3.0.zip # [win]
-  url: https://b-tk.googlecode.com/files/python-btk-0.3.0_win-amd64.exe # [win64 and py27]
-  sha1: 4a64c7aaf62998d22a6aa15edbd68c9cd08e960d # [win64 and py27]
+  #url: https://b-tk.googlecode.com/files/python-btk-0.3.0_win-amd64.exe # [win64 and py27]
+  #sha1: 4a64c7aaf62998d22a6aa15edbd68c9cd08e960d  # [win64 and py27]
   
-  url: https://b-tk.googlecode.com/files/python-btk-0.3.0_win32.exe # [win32 and py27]
-  sha1: 76ef382d508072a6daeff29b811e16f895411c66 # [win64 and py27]
+  url: https://b-tk.googlecode.com/files/python-btk-0.3.0_win32.exe  # [win32 and py27]
+  sha1: 76ef382d508072a6daeff29b811e16f895411c66  # [win32 and py27]
   
   
 # The build number should be incremented for new builds of the same version
@@ -23,7 +23,7 @@ requirements:     # (optional)
     - python
   run:
     - python
-    - numpy
+    - numpy >=1.7
 
   
 about:            # (optional)
