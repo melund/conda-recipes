@@ -1,12 +1,12 @@
 package:
   name: conda-build     # lower case name of package, may contain '-' but no spaces
-  version: 3.5.3fix       # version of package. Should use the PEP-386 verlib conventions.
+  version: 1.8.1.test       # version of package. Should use the PEP-386 verlib conventions.
 
 source:
   git_url: https://github.com/conda/conda-build.git
 
 build:            # (optional)
-  number: 1                       # (optional, defaults to 0)
+  number: 0                       # (optional, defaults to 0)
   
 #  entry_points:
 #    - conda-build = conda_build.main_build:main

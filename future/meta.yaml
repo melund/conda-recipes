@@ -1,0 +1,31 @@
+package:
+  name: future       # lower case name of package, may contain '-' but no spaces
+  version: {{ environ['GIT_DESCRIBE_TAG'] }}
+
+  
+source:
+  git_url: https://github.com/PythonCharmers/python-future.git
+
+
+build:
+  # The build number should be incremented for new builds of the same version
+  number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+
+  entry_points:
+    # This creates an entry point named bsdiff4 that calls bsdiff4.cli.main_bsdiff4()
+    - futurize = libfuturize.main:main
+    - pasteurize = libpasteurize.main:main
+
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+
+
+
+about:
+  home: https://github.com/PythonCharmers/python-future
+  license: MIT
