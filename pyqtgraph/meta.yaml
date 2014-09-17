@@ -1,20 +1,22 @@
 package:
   name: pyqtgraph
-  version: !!str 0.9.8
+  version: "0.9.8"
 
 source:
   fn: pyqtgraph-0.9.8.tar.gz
-  url: http://www.pyqtgraph.org/downloads/pyqtgraph-0.9.8.tar.gz
+  url: https://pypi.python.org/packages/source/p/pyqtgraph/pyqtgraph-0.9.8.tar.gz
+  md5: 2b67bf1a0b9b9dded5654efa0c82ab38
 
 requirements:
-    build:
-        - python
-        - numpy
-        - scipy
-    run:
-        - python
-        - numpy
-        - scipy
+  build:
+    - python
+  run:
+    - python
+    - numpy
+    - pyqt
+    - pyopengl
 
-about:            # (optional)
+about:
   home: http://www.pyqtgraph.org
+  license: MIT
+  summary: Scientific graphics and GUI using Qt and numpy
