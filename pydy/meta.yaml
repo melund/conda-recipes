@@ -1,13 +1,12 @@
 package:
   name: pydy     # lower case name of package, may contain '-' but no spaces
-  version: 0.2.1_dev     # version of package. Should use the PEP-386 verlib conventions.
+  version: {{ environ['GIT_DESCRIBE_TAG'] }}
 
 source:
   git_url: https://github.com/pydy/pydy.git
-  git_tag: motion-view-dev
 
 build:            # (optional)
-  number: 1                      # (optional, defaults to 0)
+    number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
 
 # the build and runtime requirements:
 requirements:     # (optional)
@@ -22,7 +21,6 @@ requirements:     # (optional)
     - python
     - sympy
     - numpy
-    - ipython
     
 
 
