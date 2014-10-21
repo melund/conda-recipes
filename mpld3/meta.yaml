@@ -1,0 +1,32 @@
+package:
+    name: mpld3
+    version: {{ environ['GIT_DESCRIBE_TAG'] }}
+
+source:
+    git_url: https://github.com/jakevdp/mpld3.git
+
+build:
+    number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+
+requirements:
+    build:
+        - python
+        - distribute
+        - matplotlib
+        - jinja2
+
+    run:
+        - python
+        - matplotlib
+        - jinja2
+
+#test:
+#    imports:
+#        - mpld3
+
+    #commands:
+    #    -
+
+about:
+    home: http://mpld3.github.io/
+    license: BSD 3-clause
