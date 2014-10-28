@@ -18,16 +18,10 @@ requirements:     # (optional)
   build:
     - python
     - setuptools
-    - scipy
     
   run:
     - setuptools
     - python
-    - h5py
-    - scipy
-    - numpy
-    - matplotlib
-    
 
     
     
@@ -36,6 +30,19 @@ requirements:     # (optional)
 #  # Python imports
 #  imports:
 #    - anypytools
+
+app:
+    entry: ${PREFIX}\Scripts\AnyPyToolsTutorial.bat
+    summary: AnyPyTools Tutorial
+    icon: apt_icon.png
+    type: web
+#    cli_opts:
+#        args: --notebook-dir %s
+#        default: "${PREFIX}/AnyPyToolsTutorial 00_AnyPyTools_tutorial.ipynb"
+#        name: "Start directory"
+
+    
+
 
 about:            # (optional)
   home: https://github.com/AnyBody-Research-Group/AnyPyTools

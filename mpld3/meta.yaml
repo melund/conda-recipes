@@ -1,15 +1,12 @@
-
 package:
     name: mpld3
-    version: 0.2
+    version: {{ environ['GIT_DESCRIBE_TAG'] }}
 
 source:
-    fn: mpld3-0.2.tar.gz
-    url: https://pypi.python.org/packages/source/m/mpld3/mpld3-0.2.tar.gz
-    md5: 266f4e51a094f8ff1aaf7e2018f763b4
+    git_url: https://github.com/jakevdp/mpld3.git
 
 build:
-    number: 0
+    number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
 
 requirements:
     build:
@@ -23,9 +20,9 @@ requirements:
         - matplotlib
         - jinja2
 
-test:
-    imports:
-        - mpld3
+#test:
+#    imports:
+#        - mpld3
 
     #commands:
     #    -

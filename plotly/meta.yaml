@@ -1,11 +1,10 @@
 package:
   name: plotly
-  version: !!str 1.0.19
+  version: !!str 1.2.9
 
 source:
-  fn: plotly-1.0.19.tar.gz
-  url: https://pypi.python.org/packages/source/p/plotly/plotly-1.0.19.tar.gz
-  md5: ea62720992e178071fa8e0d26b555544
+  fn: plotly-1.2.9.tar.gz
+  url: https://pypi.python.org/packages/source/p/plotly/plotly-1.2.9.tar.gz
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -30,10 +29,12 @@ requirements:
     - python
     - setuptools
     - requests
+    - six
 
   run:
     - python
     - requests
+    - six
 
 #test:
   # Python imports
