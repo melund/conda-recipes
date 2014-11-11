@@ -20,8 +20,11 @@ requirements:     # (optional)
     - setuptools
     
   run:
+    - pywin32 # [win]
+    - h5py
     - setuptools
     - python
+    
 
     
     
